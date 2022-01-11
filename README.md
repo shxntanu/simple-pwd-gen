@@ -12,18 +12,18 @@ n = input_numbers
 c = input_char
 p = ""
 x = ""
-y= ""
+y = ""
 length = a + n + c
 password = ""
+if input_alphabets == 0:
+    random1.pop(random1.index('l'))
+elif input_numbers == 0:
+    random1.pop(random1.index('n'))
+elif input_char == 0:
+    random1.pop(random1.index('s'))
 for y in range(0,length):
     x = random.choice(random1)
-    if x == 'l' and input_alphabets == 0:
-        random1.pop(random1.index('l'))
-    elif x == 'n' and input_numbers == 0:
-        random1.pop(random1.index('n'))
-    elif x == 's' and input_char == 0:
-        random1.pop(random1.index('s'))
-    elif x == 'l' and input_alphabets>0:
+    if x == 'l' and input_alphabets>0:
         input_alphabets -=1
         p = random.choice(letters)
         password += p
